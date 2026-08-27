@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang="en" style=""><head>
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Activities &amp; Events - YouthFunded</title>
+<title>YouthFunded - Articles &amp; Insights</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
   tailwind.config = {
@@ -175,24 +175,32 @@
   }
 </script>
 <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .glass-button-secondary {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid #012d1d;
+        .card-hover:hover {
+            transform: scale(1.02) translateY(-4px);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow: 0 20px 40px rgba(15, 82, 56, 0.08);
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e7e8e9 100%);
+        .text-gradient {
+            background: linear-gradient(135deg, #012d1d 0%, #3f6653 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden relative">
+<!-- Decorative Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-fixed opacity-30 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-tertiary-fixed-dim opacity-20 blur-[120px]"></div>
+</div>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/30 dark:bg-black/30 backdrop-blur-xl border-b border-white/10 dark:border-white/5">
 <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
@@ -200,8 +208,8 @@
 <div class="hidden md:flex items-center space-x-gutter">
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/about/">About</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/team/">Team</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/articles/">Articles</a>
-<a class="text-primary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-secondary-fixed-dim pb-1 font-label-md text-label-md" href="/activities/">Activities</a>
+<a class="text-primary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-secondary-fixed-dim pb-1 font-label-md text-label-md" href="/articles/">Articles</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/activities/">Activities</a>
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/partners/">Partners</a>
 </div>
 <a href="/contact/" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90">
@@ -212,120 +220,201 @@
 </button>
 </div>
 </nav>
-<!-- Main Content Canvas -->
-<main class="flex-grow pt-[100px] pb-stack-xl gradient-bg relative overflow-hidden">
-<!-- Abstract Background Element -->
-<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-secondary-fixed-dim/20 rounded-full blur-[100px] -z-10"></div>
-<div class="absolute bottom-[20%] left-[-10%] w-[500px] h-[500px] bg-primary-fixed/30 rounded-full blur-[120px] -z-10"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<!-- Hero Section -->
-<header class="text-center mb-stack-xl pt-stack-lg">
-<span class="inline-block py-1 px-4 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md mb-stack-sm">Get Involved</span>
-<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-stack-md">Financial Literacy &amp; Empowerment Events</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Join our community in driving change. From hands-on workshops to global webinars, find your way to make an impact.</p>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-stack-xl text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary mb-stack-sm text-gradient">
+                    Insights &amp; Stories
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Explore articles on youth empowerment, financial literacy, and the inspiring community projects making a real-world impact.
+                </p>
+</div>
+<!-- Category Chips -->
+<div class="flex flex-wrap gap-2 mt-stack-md md:mt-0 justify-center md:justify-end">
+<button class="px-4 py-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md hover:opacity-80 transition-opacity">All</button>
+<button class="px-4 py-2 rounded-full glass-panel border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Financial Literacy</button>
+<button class="px-4 py-2 rounded-full glass-panel border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Inclusion</button>
+<button class="px-4 py-2 rounded-full glass-panel border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Education</button>
+<button class="px-4 py-2 rounded-full glass-panel border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">Community Stories</button>
+</div>
 </header>
-<!-- Upcoming Events Bento Grid -->
+<!-- Featured Article (Bento Grid Style) -->
 <section class="mb-stack-xl">
-<div class="flex items-center justify-between mb-stack-md">
-<h2 class="font-headline-md text-headline-md text-primary">Upcoming Highlights</h2>
-<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center gap-1" href="#">View Calendar <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></a>
+<article class="glass-panel rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-sm card-hover transition-all duration-300">
+<div class="md:w-1/2 p-stack-lg flex flex-col justify-center order-2 md:order-1">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md text-[12px]">Featured</span>
+<span class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 5 min read
+                        </span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Featured Event (Large) -->
-<div class="col-span-1 md:col-span-8 glass-card rounded-2xl overflow-hidden group hover:scale-[1.01] transition-transform duration-300 relative min-h-[400px] flex flex-col justify-end p-stack-lg">
-<div class="absolute inset-0 z-0">
-<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A large group of diverse young students planting trees in a sunny, green park setting, conveying environmental action and community spirit, bright natural lighting, optimistic mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcDoQAvKaOkyL51jLfm26bWrlpXf918OPAnnAysvRzRss0lqIp-4noPTYx2XG6Ly7zegIgJEjVbl3boir051ofhUzuEzT34hob4e_x-bGeFYzruNk4mriIb7wu5z5TA5bxdNqHSqJhViObJyIgBY82h52fyYs0IsmIVKMW659LVE66a2bds38ynuKaShu2cqmWJqetMcnXzKkaY5ht59D92d0HJiRIMYexRFyXf4atcIEDEAAWOPFy9g')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md leading-tight">
+                        Empowering the Next Generation: How Student-Led Initiatives are Changing Local Economies
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg line-clamp-3">
+                        Discover the remarkable stories of high school and college students who are taking charge of their communities by launching sustainable micro-businesses and community gardens.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a young female student leader smiling warmly, bathed in natural sunlight with a soft, bright background, conveying optimism and approachability in a modern editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx5RzdzrVT5ZbOuCJjWHjLV8GPzuBBXT3YYBb2Qk5myXCE8fzBQN-_F34EFv8QUstWtaafJTYroP0NC3znCZPOHBuzNznyyft97Ukq6RGJe5F0l-1lI88qJVNcxS17OllQVLuXZHCnxX5dCpGwn0Tu8J9L4eHNJ2tXOomzl-pRCoP6kZduT7YhZwmAPbj_mD2iiZa0PAbK2x5iQc2EEBv5iNEEscgGdGWgzyKBQXm4VnsYNNZ0O_xfxg">
 </div>
-<div class="relative z-10 text-white">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-white font-label-md text-[12px] uppercase tracking-wider">Offline</span>
-<span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-md text-[12px] uppercase tracking-wider"><span class="material-symbols-outlined align-middle mr-1" style="font-size: 14px;">calendar_month</span>Oct 15</span>
-</div>
-<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">Regional Literacy Summit</h3>
-<p class="font-body-md text-body-md text-white/90 mb-6 max-w-xl">A full day of keynote speakers, interactive workshops, and collaborative project planning aimed at local climate resilience.</p>
-<button class="bg-white text-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-surface-container-low transition-colors shadow-lg">Register Now</button>
-</div>
-</div>
-<!-- Secondary Events (Small Stack) -->
-<div class="col-span-1 md:col-span-4 flex flex-col gap-gutter">
-<div class="glass-card rounded-2xl p-stack-md flex-1 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
-<div class="flex justify-between items-start mb-4">
-<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-md text-[11px] uppercase tracking-wider">Webinar</span>
-<span class="material-symbols-outlined text-outline">laptop_mac</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Investing 101 Webinar</h4>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Learn the basics of digital fundraising and grant writing.</p>
-<div class="mt-auto flex items-center justify-between text-sm font-label-md text-secondary">
-<span class="">Tomorrow, 2:00 PM EST</span>
-<span class="material-symbols-outlined">arrow_outward</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Sarah Jenkins</div>
+<div class="text-sm text-on-surface-variant">Oct 12, 2024</div>
 </div>
 </div>
-<div class="glass-card rounded-2xl p-stack-md flex-1 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
-<div class="flex justify-between items-start mb-4">
-<span class="px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-md text-[11px] uppercase tracking-wider">Workshop</span>
-<span class="material-symbols-outlined text-outline">group</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Inclusion Workshop</h4>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Interactive session on leading local initiatives.</p>
-<div class="mt-auto flex items-center justify-between text-sm font-label-md text-secondary">
-<span class="">Sat, Nov 2, City Library</span>
-<span class="material-symbols-outlined">arrow_outward</span>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
 </div>
 </div>
+<div class="md:w-1/2 h-64 md:h-auto order-1 md:order-2 relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A wide, cinematic shot of a diverse group of teenagers working together in a vibrant, sunlit urban community garden. They are planting saplings. The mood is energetic, hopeful, and deeply grounded in community action, featuring rich greens and warm earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDitzn6ms_XrX2VAvir8wDc5iah0sQTOck_KSDpjm65H9nzlGK9TEnslkhgmN_BqnLk8EAmcFmyX4sHllISNqidmN2rGEp4D5jkV4FO8AeBZDaKWzQtPuTUhFRMOlPp_A9A4lESaCY4azpLKghfM6eLMw09A9UzZ2JZqG8QdWhnbEgpsFOE-hTd0bJdT3Q0Yz7alE909p3qVAIA9jwBDNJVtOYicz630C11jX90YJgIVYl6bg9UpFZihA">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden"></div>
 </div>
-</div>
+</article>
 </section>
-<!-- Activity Categories (Tabs/Pills) -->
-<section class="mb-stack-xl">
-<div class="flex flex-wrap gap-4 justify-center mb-stack-lg">
-<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md">All Activities</button>
-<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Workshops</button>
-<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Webinars</button>
-<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Volunteer Drives</button>
+<!-- Article Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Standard Card 1 -->
+<article class="glass-panel rounded-xl overflow-hidden flex flex-col shadow-sm card-hover transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A brightly lit modern classroom scene where a young male teacher is writing financial concepts on a clear glass whiteboard. Students in the foreground are engaged. The aesthetic is clean, professional, and optimistic with soft blue and green hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGvUWgqeqnLYy9rWAaaf4YWRs4QxcQ7SMIZ7q7vPwlJv6fx_7fJFYNVQB82lrU7pS_46eX_6wUrpWjwByhSGhI9lbFQgfUwNc3GX-7I48vrx86PChz-YXwRJ34bOmzrnrxOOehKYNzw4_rWtPtQiY3zpcL9wNZqiqSo7GZtcbim5K_j8OMmyXdX2CCh-Rl_SjMS0GCIVnD_44bm28_m0S0MQ9-QHDr_34NSdCqgUXbwj-Xw_KBMemYdg">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md text-primary font-label-md text-[12px] shadow-sm">
+                        Financial Literacy
+                    </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Activity Card 1 -->
-<div class="glass-card rounded-xl p-6 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 group">
-<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-weight="fill">volunteer_activism</span>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 leading-snug">Navigating the 2025 Job Market</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">
+                        Start building wealth early with these simple, low-risk micro-investing strategies tailored for teens with part-time jobs.
+                    </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar portrait of a young man with glasses, looking professional yet approachable against a light neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjxKcjx85ZHwgHAokECbyjBuZ8ksQ9e8DNP_LrSNXvFxridBhugAkpnEFVdeZC3ENygZEq1W-VOIpfd81x_RideH5fII2Nf-MhGgIvZ2zYA1G8MLcIMLAXVar7yGgGTg014-ZJW0yov3mjTLzzoJNAidNj8YNFRFLo-0UZiFTIyuyF5Jtz7nuDifpEiB4izqO-xCQBNzYNxsIYmhNBItj8MA9adGQMMW7MtIGG416EV2yUAf36wE7rsw">
 </div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Urban Garden Renewal</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Join our weekend crew to revitalize community gardens in downtown areas. Tools and training provided.</p>
-<ul class="border-t border-outline-variant/20 pt-4 space-y-2 font-body-md text-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">location_on</span> City Park District</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">schedule</span> Every Saturday, 9AM</li>
-</ul>
-<button class="w-full mt-6 glass-button-secondary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-white transition-colors">Join Roster</button>
+<div class="text-sm font-label-md text-on-surface">David Chen</div>
 </div>
-<!-- Activity Card 2 -->
-<div class="glass-card rounded-xl p-6 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 group">
-<div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-weight="fill">school</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Student Mentorship Program</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Connect with high school students to provide guidance on college applications and career paths.</p>
-<ul class="border-t border-outline-variant/20 pt-4 space-y-2 font-body-md text-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">public</span> Online / Hybrid</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">schedule</span> Flexible Hours</li>
-</ul>
-<button class="w-full mt-6 glass-button-secondary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-white transition-colors">Become a Mentor</button>
-</div>
-<!-- Activity Card 3 -->
-<div class="glass-card rounded-xl p-6 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 group">
-<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-weight="fill">campaign</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Advocacy Training Bootcamp</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">A specialized online course teaching effective communication strategies for social causes.</p>
-<ul class="border-t border-outline-variant/20 pt-4 space-y-2 font-body-md text-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">computer</span> Virtual Platform</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary" style="font-size: 16px;">schedule</span> 4-Week Cohort</li>
-</ul>
-<button class="w-full mt-6 glass-button-secondary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-white transition-colors">Apply for Next Cohort</button>
+<div class="text-xs text-on-surface-variant">Oct 10</div>
 </div>
 </div>
-</section>
+</article>
+<!-- Standard Card 2 -->
+<article class="glass-panel rounded-xl overflow-hidden flex flex-col shadow-sm card-hover transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An abstract, high-quality digital illustration of interconnected nodes and glowing lines representing digital community networking, colored in soft greens and whites, clean and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfPYDsyxqUQ2gcjmXOTmvNAqJ5NZi2TkW0bXZrDveXGj4UTPLn804l9aVxyKp2IB66bsDBRm9VRQGHvqPTN05CoVakGVH1UbQN3AHOUF_7zC3p5dcPKSjzBHDJxRHXerMYhUT9Ei-dHkeUYkuD5URNHOOlhoIaWdGcu1Rty_p85jb49gbm2EKUBCofGf6ZHv06pd5SOpkM_8yD6fMIvw5Bh3Nanb7TYtZ9O4D9IsWMLDRNE_4RuWRNOw">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md text-primary font-label-md text-[12px] shadow-sm">
+                        Inclusion
+                    </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 leading-snug">Why Literacy is the Key to Equality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">
+                        How to leverage social platforms not just for scrolling, but for creating meaningful, action-oriented local networks.
+                    </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar portrait of a smiling woman with curly hair against a soft green background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQzEjNlwT10G_7AybddL_raVPAUi9_3VwalTKjyxZY5Kpa1Z2AzKhn9T42orDTgOgciU-M7rqUA1B15GU7JOzPFk0Ux6p1m5um6GcUx3AntGZrBZQ8BhcoKBhS8D0ozBjKWU5XEPIg9gX3kqywkI7tYPC0a4NCUUXGlK_bEFmmti5jibBZZOmrOrplHTyedh-EPHib5P3oAw1Q2A92U8FpGHSI-NqyMfPyt38c1lgh3lWKsy4SW-4SLw">
+</div>
+<div class="text-sm font-label-md text-on-surface">Maya Patel</div>
+</div>
+<div class="text-xs text-on-surface-variant">Oct 08</div>
+</div>
+</div>
+</article>
+<!-- Text-Heavy Card -->
+<article class="glass-panel rounded-xl overflow-hidden flex flex-col shadow-sm card-hover transition-all duration-300 bg-primary-container/5 border-primary/10">
+<div class="p-stack-lg flex-grow flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">campaign</span>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider text-xs">Announcement</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">2025 Youth Leadership Grant Applications Now Open</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        We are thrilled to announce that applications for the upcoming year's leadership grants are live. Find out if your project qualifies.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-surface-tint transition-colors mt-auto" href="#">
+                        Read Guidelines <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Standard Card 3 -->
+<article class="glass-panel rounded-xl overflow-hidden flex flex-col shadow-sm card-hover transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A crisp, bright photo of hands holding a small, thriving green plant sprouting from soil in a recycled eco-friendly cup. The background is a soft, out-of-focus park setting, conveying environmentalism and growth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbjyf5GJZ2xshrrToPqsRKN9fR1E4vQzn97M885O_pHCQRnAdMGxO2O6JLjKYjhOBJKHWBFWG7ZcIo8NzUkBAtMEECKyYdcUHv8-4t_mCiEkPPDQTuARb20Gncfx-mzEkZEFjrYdcHp0KFWuEVXN_IILM0iAQ2fh2koJypFXfrrczZLeEWHVXMC2fPsqFtD0mU8uf55iL2HfNiroaEP56ViYQ5rimstzJnp32oCan930ht4RZ7UQtoUA">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md text-primary font-label-md text-[12px] shadow-sm">
+                        Education
+                    </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 leading-snug">Student's Guide to SDG 8</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">
+                        Five actionable steps your student council can take this semester to drastically reduce campus waste.
+                    </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar of a young man wearing a sustainable brand t-shirt, standing outdoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0NmNSULThSTtUxZmf3bxrb1atbkpzkpWY4OUQKA9x5oqZic5lORfk1WbcesT0PdbJV1ou6cSX5BpN9cE1y3a3CzQMbeWBJSUuB_2lUU_kZK-DWetjtQxu2h5ErXp5PZQQTshhOuWayAGRfsD4kKtFGZ3VKCmwpDq7ZVzc4LsH691fqtWWsCZAR7-TVY8IpBM3Tk6jsTVC5bQGxTL4ZbvdKyvZsfKG8OkqetErJ2PzD-GPRkubZIZAzw">
+</div>
+<div class="text-sm font-label-md text-on-surface">Leo Vance</div>
+</div>
+<div class="text-xs text-on-surface-variant">Oct 05</div>
+</div>
+</div>
+</article>
+<!-- Standard Card 4 -->
+<article class="glass-panel rounded-xl overflow-hidden flex flex-col shadow-sm card-hover transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A focused shot of a modern workspace with a laptop displaying charts, a notebook, and a cup of coffee. The aesthetic is clean, well-lit, and professional, utilizing soft natural light and subtle green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoxcNuyyaM5VYi3GNRJCM0chkdppAqk3kv8lGDE79FtyVn8_HXKtH3ZNdlD2RSzY0bYaaW6ZxSZtQkAGeOUqs-mkwacYUwTk6cAebbivqcQS8qhRpFwwXzeK9a_n21TqA3tuj79iKw5gm5yiPBWfftJqzY0Ji9kB7uEPVPhy2TgzHrxK9fZo1TYHsc9L9Vk3NNmlzv3aw7s71mHQ-0MEflSWGIZPtPZ6AtD3P7FgH4BmUvuGHVVCddOw">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md text-primary font-label-md text-[12px] shadow-sm">
+                        Community Stories
+                    </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 leading-snug">Resume Building for First-Time Job Seekers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 text-sm">
+                        No experience? No problem. Learn how to highlight extracurriculars, volunteer work, and soft skills to land your first role.
+                    </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar of a professional career counselor smiling in a modern office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIjAzS8xoLpSMVxoaYs5ADm0O01bsNQetKHVN_k80vN2ci2YDw9yDlQWBDNfH9lj0pFiC_iNs_36ameqR738we5-TOoT5qwZLlKen4BjoRsHNrYtboYMt7lFzrMGrtPNQIzQC9lZnaDaU5dLzla_7rBJusnnfDaccrt3oJeTvF1Mybh3znSw_mZQHboa6ftQNN1LigbWrrmYuhcYYBgUyRkYfkUrbtKlpzmzsWySsCbH0dEmgoMar6rw">
+</div>
+<div class="text-sm font-label-md text-on-surface">Elena Rostova</div>
+</div>
+<div class="text-xs text-on-surface-variant">Oct 01</div>
+</div>
+</div>
+</article>
+<!-- Newsletter Signup Card -->
+<article class="rounded-xl overflow-hidden flex flex-col shadow-sm bg-primary text-on-primary p-stack-lg relative">
+<div class="absolute top-[-20%] right-[-10%] w-48 h-48 rounded-full bg-white opacity-10 blur-2xl"></div>
+<div class="relative z-10 flex flex-col h-full justify-center">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">mail</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Stay Updated</h3>
+<p class="font-body-md text-body-md text-on-primary/80 mb-6 text-sm">
+                        Get the latest articles, grant announcements, and community spotlights delivered straight to your inbox.
+                    </p>
+<form class="mt-auto flex flex-col gap-3">
+<input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-on-primary placeholder:text-on-primary/50 focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed font-body-md" placeholder="Your email address" type="email">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-label-md py-3 rounded-lg hover:bg-white transition-colors" type="button">
+                            Subscribe
+                        </button>
+</form>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<div class="mt-stack-xl flex justify-center">
+<button class="px-8 py-3 rounded-full border-2 border-primary text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-300">
+                Load More Articles
+            </button>
 </div>
 </main>
 <!-- Footer -->
@@ -334,6 +423,19 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Empowering students to lead for a better tomorrow.</p>
 <p class="font-label-md text-label-md text-on-surface-variant">© 2025 YouthFunded. All rights reserved.</p>
 </div></footer>
+<script>
+        // Simple scroll effect for nav
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('py-4', 'py-2');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('py-2', 'py-4');
+            }
+        });
+    </script>
 
 
 </body></html>
