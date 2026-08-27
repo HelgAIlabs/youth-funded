@@ -194,34 +194,45 @@
 <body class="bg-mesh min-h-screen text-on-surface antialiased flex flex-col relative overflow-x-hidden">
 <!-- TopNavBar -->
 <header class="bg-white/30 dark:bg-black/30 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 dark:border-white/5 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<a class="text-headline-sm font-headline-sm font-bold text-primary dark:text-secondary-fixed-dim scale-95 active:scale-90 transition-transform" href="/">
-                YouthFunded
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+
+        <a class="text-headline-sm font-headline-sm font-bold text-primary dark:text-secondary-fixed-dim scale-95 active:scale-90 transition-transform" href="/">
+            YouthFunded
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-gutter">
+            <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/about/">
+                About
             </a>
-<nav class="fixed top-0 w-full z-50 bg-white/30 dark:bg-black/30 backdrop-blur-xl border-b border-white/10 dark:border-white/5">
-<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
-<a class="text-headline-sm font-headline-sm font-bold text-primary dark:text-secondary-fixed-dim" href="/">YouthFunded</a>
-<div class="hidden md:flex items-center space-x-gutter">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/about/">About</a>
-<a class="text-primary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-secondary-fixed-dim pb-1 font-label-md text-label-md" href="/team/">Team</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/articles/">Articles</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/activities/">Activities</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/partners/">Partners</a>
-</div>
-<a href="/contact/" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90">
+
+            <a class="text-primary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-secondary-fixed-dim pb-1 font-label-md text-label-md" href="/team/">
+                Team
+            </a>
+
+            <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/articles/">
+                Articles
+            </a>
+
+            <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/activities/">
+                Activities
+            </a>
+
+            <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="/partners/">
+                Partners
+            </a>
+        </nav>
+
+        <div class="flex items-center gap-stack-md">
+            <a href="/contact/" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90 shadow-[0_4px_14px_0_rgba(1,45,29,0.2)]">
                 Contact Us
             </a>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<div class="flex items-center gap-stack-md">
-<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90 shadow-[0_4px_14px_0_rgba(1,45,29,0.2)]">
-                    Contact Us
-                </button>
-</div>
-</div>
+
+            <button class="md:hidden text-primary p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+
+    </div>
 </header>
 <main class="flex-grow pt-32 pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <!-- Hero Section -->
